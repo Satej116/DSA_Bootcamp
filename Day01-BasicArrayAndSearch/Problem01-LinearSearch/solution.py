@@ -1,6 +1,5 @@
 arr_length = int(input("Enter the Length of Array= "))
 arr = []
-element_not_found_checkar = 0
 
 try:
     if(arr_length>1):
@@ -17,10 +16,7 @@ try:
         if(target_value == arr[j]):
             print("Index = ",j)
             break
-        else:
-            element_not_found_checkar = j
-
-    if(element_not_found_checkar == arr_length-1):
+    else:
         print("Index = -1")
 
 
