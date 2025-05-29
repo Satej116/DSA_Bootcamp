@@ -1,6 +1,7 @@
 This is a simple Python program that takes a list of numerical values from the user, then searches for a target value within that list. If the target value is found, the program prints the index of the element. If not found, it prints -1.
 
 Features
+
 Takes the size of the array as input from the user.
 
 Accepts only numerical inputs to populate the array.
