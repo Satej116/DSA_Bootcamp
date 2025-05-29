@@ -1,6 +1,5 @@
 def GetData():
     arr = []
-    
     try:
         while True:
             arr_length = int(input("Enter the Length of Array = "))
@@ -22,17 +21,16 @@ def GetData():
     except:
         print("Enter only numerical values")
         
-def LinearSearch(arr, arr_length):
+def Occurences_of_Number(arr, arr_length):
         
-        target_value = int(input("Enter the Target Value = "))
+    target_value = int(input("Enter the Target Value = "))
+    count = 0
     
-        for j in range(arr_length):
-            if target_value == arr[j]:
-                print("Index =", j)
-                break
-        else:
-            print("Index = -1")
+    for j in range(0,arr_length):
+        if target_value == arr[j]:
+            count = count + 1
+    
+    print (count)
 
 arr, arr_length = GetData()
-LinearSearch(arr, arr_length)
-
+Occurences_of_Number(arr, arr_length)

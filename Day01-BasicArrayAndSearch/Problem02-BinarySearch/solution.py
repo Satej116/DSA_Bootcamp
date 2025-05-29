@@ -1,8 +1,9 @@
 arr = []
 
-try:
-    while True:
-        l = int(input("Enter the Length of Array = "))
+def GetData():
+    try:
+        while True:
+            l = int(input("Enter the Length of Array = "))
         if l > 0:
             break
         else:
