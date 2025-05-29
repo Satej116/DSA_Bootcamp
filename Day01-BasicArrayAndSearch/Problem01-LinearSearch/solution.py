@@ -1,21 +1,29 @@
-l = int(input("Enter the Length of Array= "))
-count = 0
+arr_length = int(input("Enter the Length of Array= "))
 arr = []
-print("Enter only numberical values")
+element_not_found_checkar = 0
 
-for i in range (0,l):
-    val = int(input())
-    arr.append(val)
-print(arr)
-
-target = int(input("Enter the Target Value = "))
-
-for j in range(0,l):
-    if(target == arr[j]):
-        print("Index = ",j)
-        break
+try:
+    if(arr_length>1):
+        for i in range (0, arr_length):
+            val = int(input())
+            arr.append(val)
+        print(arr)
     else:
-        count = j
+        print("Length cannot be negative")
 
-if(count == l-1):
-    print("Index = -1")
+    target_value = int(input("Enter the Target Value = "))
+    
+    for j in range(0, arr_length):
+        if(target_value == arr[j]):
+            print("Index = ",j)
+            break
+        else:
+            element_not_found_checkar = j
+
+    if(element_not_found_checkar == arr_length-1):
+        print("Index = -1")
+
+
+except:
+    print("Enter only numberical values")
+
