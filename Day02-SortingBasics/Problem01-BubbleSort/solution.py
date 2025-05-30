@@ -22,17 +22,16 @@ def GetData():
     except:
         print("Enter only numerical values")
         
-def LinearSearch(arr, arr_length):
-        
-        target_value = int(input("Enter the Target Value = "))
+def BubbleSort(arr, arr_length):
     
         for j in range(arr_length):
-            if target_value == arr[j]:
-                print("Index =", j)
-                break
-        else:
-            print("Index = -1")
+            for k in range(arr_length-j-1):
+                if (arr[k]>arr[k+1]):
+                    arr[k]=arr[k] + arr[k+1]
+                    arr[k+1]=arr[k] - arr[k+1]
+                    arr[k]=arr[k] - arr[k+1]
+        print("Sorted Array= ",arr)
 
 arr, arr_length = GetData()
-LinearSearch(arr, arr_length)
+BubbleSort(arr, arr_length)
 

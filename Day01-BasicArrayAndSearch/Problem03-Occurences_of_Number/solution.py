@@ -3,7 +3,7 @@ def GetData():
     while True:
         try:
                 arr_length = int(input("Enter the Length of Array = "))
-                if arr_length > 0:
+                if arr_length > 1:
                     try:
                         print("Enter elements in the array:\n")
                         for i in range(arr_length):
@@ -14,7 +14,7 @@ def GetData():
                     except:
                         print("Enter Numerical values only")
                 else:
-                    print("Length must be a positive number. Please try again.")
+                    print("Length must be a positive number and greater than 1. Please try again.")
             
         except:
             print("Enter only numerical values")
