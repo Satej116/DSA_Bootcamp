@@ -24,18 +24,21 @@ def GetData():
         
 def TwoSum(arr, arr_length):
         try:
-            flag = 0
+            #flag = 0
             target_value = int(input("Enter the Target Value = "))
             for j in range(arr_length):
                 for k in range(j+1,arr_length):
                     if (target_value == (arr[j]+arr[k])):
-                        flag = 1
-                        break
-            
-            if (flag==1):
-                print(True)
+                        #flag = 1
+                        print(True)
+                        return
             else:
                 print(False)
+            
+        #     if (flag==1):
+        #         print(True)
+        #     else:
+        #         print(False)
         except:
             print("Type only numerical values")
 
