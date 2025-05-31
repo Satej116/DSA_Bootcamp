@@ -22,22 +22,23 @@ def GetData():
     except:
         print("Enter only numerical values")
         
-def BubbleSort(arr, arr_length):
-    
-        for j in range(arr_length):
-            for k in range(arr_length-j-1):
-                if (arr[k]>arr[k+1]):
-                    arr[k], arr[k + 1] = arr[k + 1], arr[k]
-        print("Array= ",arr)
-
-        for x in range(arr_length):
-            if (arr[x]==0):
-                for l in range(x,arr_length-1):
-                    arr[l] = arr[l+1]     
-                arr[arr_length-1] = 0
-                    
-        print("Array= ",arr)
+def TwoSum(arr, arr_length):
+        try:
+            flag = 0
+            target_value = int(input("Enter the Target Value = "))
+            for j in range(arr_length):
+                for k in range(j+1,arr_length):
+                    if (target_value == (arr[j]+arr[k])):
+                        flag = 1
+                        break
+            
+            if (flag==1):
+                print(True)
+            else:
+                print(False)
+        except:
+            print("Type only numerical values")
 
 arr, arr_length = GetData()
-BubbleSort(arr, arr_length)
+TwoSum(arr, arr_length)
 
