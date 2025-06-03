@@ -32,6 +32,3 @@ Edit
 ## Usage
 
 Simply run the script and enter any string when prompted.
-
-```bash
-python reverse_string.py
