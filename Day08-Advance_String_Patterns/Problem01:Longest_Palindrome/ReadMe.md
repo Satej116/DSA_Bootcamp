@@ -1,12 +1,12 @@
-# 🔁 Longest Palindromic Substring Finder
+# Longest Palindromic Substring Finder
 
-## 📌 Description
+## Description
 
 This Python program takes a string input and prints all **palindromic substrings** found within it, using a brute-force approach.
 
 ---
 
-## 🧠 Logic
+## Logic
 
 - Iterates over all substrings.
 - Checks if the start and end characters are the same.
@@ -15,8 +15,7 @@ This Python program takes a string input and prints all **palindromic substrings
 > Example: `"madamracecar"` → Will print `"madam"`, `"racecar"`, etc.
 
 ---
-
-## ✅ Features
+## Features
 
 - Case-insensitive input.
 - Prints each palindromic substring found in the string.
