@@ -14,6 +14,7 @@ def compress(s):
             if count > 1:
                 result += str(count)
             count = 1
+            
     result += s[-1]
     if count > 1:
         result += str(count)
