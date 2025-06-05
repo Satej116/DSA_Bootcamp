@@ -1,21 +1,22 @@
-# Longest Palindromic Substring Finder
+# Longest Palindromic Substring Finder (Optimized)
 
 ## Description
 
-This Python program takes a string input and prints all **palindromic substrings** found within it, using a brute-force approach.
+This Python program finds and prints the **longest palindromic substring** in a given string using the **Expand Around Center** approach, which is significantly more efficient than brute-force methods.
 
 ---
 
 ## Logic
 
-- Iterates over all substrings.
-- Checks if the start and end characters are the same.
-- Validates if the substring is a **palindrome** using Python slicing (`[::-1]`).
-
-> Example: `"madamracecar"` → Will print `"madam"`, `"racecar"`, etc.
+- For each character in the string:
+  - Expand around a single character (odd-length palindrome).
+  - Expand around a pair of characters (even-length palindrome).
+- Track the longest valid palindrome found during these expansions.
 
 ---
+
 ## Features
 
-- Case-insensitive input.
-- Prints each palindromic substring found in the string.
+- Converts input to lowercase for uniform comparison.
+- Efficient time complexity: **O(n²)**.
+- Clean implementation using helper function.
