@@ -22,13 +22,21 @@ def GetData():
     except:
         print("Enter only numerical values")
         
-def BubbleSort(arr, arr_length):
+def InsertionSort(arr, arr_length):
     
-        for k in range(1,arr_length):
-            if (arr[k]<arr[k-1]):
-                arr[k], arr[k-1] = arr[k-1], arr[k]
-        print("Sorted Array= ",arr)
+        for i in range (arr_length):
+            key = arr[i]
+            j = i - 1
+
+            while(j>=0 and arr[j]>key):
+                arr[j+1] = arr[j]
+                j-=1
+            arr[j+1] = key
+        
+        print(arr)
+
+
 
 arr, arr_length = GetData()
-BubbleSort(arr, arr_length)
+InsertionSort(arr, arr_length)
 

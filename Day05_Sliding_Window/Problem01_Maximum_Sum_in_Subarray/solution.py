@@ -22,18 +22,22 @@ def GetData():
     except:
         print("Enter only numerical values")
         
-def BubbleSort(arr, arr_length):
+def Sliding_window(arr):
         
         k = int(input("Enter the target number ="))
         subarray = arr[:k]
-        max_sum = sum(subarray)
+        window_sum = sum(subarray)
+        max_sum = window_sum
 
-        for i in range(k,arr_length):
-            subarray2 = arr[i]-arr[k-i]
-            if(subarray2<max_sum):
-                print(max_sum)
-                break
+        for i in range(k,len(arr)):
+            window_sum += arr[i]-arr[i-k]            
+            if(max_sum<window_sum):
+                print(window_sum)        
+        else:
+            print(max_sum)
+
+    
 
 arr, arr_length = GetData()
-BubbleSort(arr, arr_length)
+Sliding_window(arr)
 

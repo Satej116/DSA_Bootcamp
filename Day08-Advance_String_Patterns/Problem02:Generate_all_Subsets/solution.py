@@ -1,35 +1,24 @@
-def GetData():
-    arr = []
-    
+def get_input():
     try:
-        while True:
-            arr_length = int(input("Enter the Length of Array = "))
-            if arr_length > 1:
-                try:
-                    print("Enter elements in the array:\n")
-                    for i in range(arr_length):
-                        val = int(input())
-                        arr.append(val)
-                    print("Array =", arr)
-                    break
-                except:
-                    print("Enter Numerical values only")
-            else:
-                print("Length must be a positive number and greater than 1. Please try again.")
-            
-        return arr, arr_length
+        user_input = input("Enter elements separated by space: ")
+        elements = user_input.strip().split()
+        return elements
+    except Exception as e:
+        print("Invalid input:", e)
+        return []
 
-    except:
-        print("Enter only numerical values")
-        
-def BubbleSort(arr, arr_length):
-        
-        print([])
-        for i in range(arr_length):
-            for j in range(arr_length+1):
-                if arr[i:j]:
-                    print(arr[i:j])
+def recursive(elements):
+    result = []
 
+    def backtrack(start, path):
+        result.append(path[:])  # Add a copy of current subset
+        for i in range(start, len(elements)):
+            path.append(elements[i])
+            backtrack(i + 1, path)
+            path.pop()
 
-arr, arr_length = GetData()
-BubbleSort(arr, arr_length)
+    backtrack(0, [])
+    return result
+
+elements = get_input()
+recursive(elements)

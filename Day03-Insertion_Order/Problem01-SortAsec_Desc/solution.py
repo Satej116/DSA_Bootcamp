@@ -30,6 +30,8 @@ def Asec(arr, arr_length):
                 min = k
         arr[j], arr[min] = arr[min], arr[j] 
     print("Asecending Sorted Array =", arr)
+    Desc = reversed(Asec)
+    print(Desc)
     return arr
 
 def Dsec(arr, arr_length):
