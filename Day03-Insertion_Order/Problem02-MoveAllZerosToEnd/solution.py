@@ -3,14 +3,14 @@ def GetData():
     
     try:
         while True:
-            arr_length = int(input("Enter the Length of Array = "))
+            arr_length = int(input("Enter the Length of arr = "))
             if arr_length > 1:
                 try:
-                    print("Enter elements in the array:\n")
+                    print("Enter elements in the arr:\n")
                     for i in range(arr_length):
                         val = int(input())
                         arr.append(val)
-                    print("Array =", arr)
+                    print("arr =", arr)
                     break
                 except:
                     print("Enter Numerical values only")
@@ -22,22 +22,31 @@ def GetData():
     except:
         print("Enter only numerical values")
         
-def BubbleSort(arr, arr_length):
-    
-        for j in range(arr_length):
-            for k in range(arr_length-j-1):
-                if (arr[k]>arr[k+1]):
-                    arr[k], arr[k + 1] = arr[k + 1], arr[k]
-        print("Array= ",arr)
+def moveZeros(arr,arr_length):
 
-        for x in range(arr_length):
-            if (arr[x]==0):
-                for l in range(x,arr_length-1):
-                    arr[l] = arr[l+1]     
-                arr[arr_length-1] = 0
-                    
-        print("Array= ",arr)
+    result = [0] * arr_length
+    index = 0  
+
+    
+    for i in range(arr_length):
+        if arr[i] != 0:
+            result[index] = arr[i]
+            index += 1
+
+    
+    for i in range(index):
+        for j in range(0, index - i - 1):
+            if result[j] > result[j + 1]:
+                result[j], result[j + 1] = result[j + 1], result[j]
+
+    
+    
+    print("After modification arr =", result)
+
+
+
+
 
 arr, arr_length = GetData()
-BubbleSort(arr, arr_length)
+moveZeros(arr, arr_length)
 

@@ -1,51 +1,33 @@
-# Bubble Sort and Move Zeros to End
+# Move Zeros and Sort Array
 
-## Description
+This Python script takes an integer array input from the user, moves all zeros to the end of the array, and sorts the non-zero elements in ascending order.
 
-This Python program:
+## Features
 
-- Takes input from the user to create an integer array.
-- Sorts the array in ascending order using the Bubble Sort algorithm.
-- Moves all zeros in the sorted array to the end while maintaining the order of non-zero elements.
+- Accepts user input for array length and elements.
+- Moves all zero elements to the end of the array.
+- Sorts the non-zero elements using Bubble Sort.
+- Displays the modified array.
 
 ## How It Works
 
-1. User inputs the length of the array (must be greater than 1).
-2. User inputs array elements (only numerical values allowed).
-3. The array is sorted using Bubble Sort.
-4. All zeros in the array are shifted to the end.
+1. Prompts the user to enter the length of the array (must be greater than 1).
+2. Accepts integer elements of the array.
+3. Creates a new array where all non-zero elements are placed first, followed by zeros.
+4. Sorts the non-zero elements in ascending order using Bubble Sort.
+5. Prints the final array with zeros moved to the end.
 
-## Sample Input & Output
+## Sample Input/Output
 
-**Input:**
-Enter the Length of Array = 6
-Enter elements in the array:
+Enter the Length of arr = 7
+Enter elements in the arr:
+
+0
+5
 3
 0
-1
-0
 2
-4
-
-makefile
-Copy
-Edit
-
-**Output:**
-Array= [0, 0, 1, 2, 3, 4]
-Array= [1, 2, 3, 4, 0, 0]
-
-shell
-Copy
-Edit
-
-## Time Complexity
-
-- Bubble Sort: O(n²)
-
-## Usage
-
-Run the script and follow the prompts:
-
-```bash
-python bubble_sort_move_zeros.py
+0
+1
+arr = [0, 5, 3, 0, 2, 0, 1]
+After modification arr = [1, 2, 3, 5, 0, 0, 0]
